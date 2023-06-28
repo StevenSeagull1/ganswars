@@ -34,6 +34,8 @@ public class GameControl : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        // ik ga niet elke if statement uitleggen want dat is waardeloos
+        // maar elk if statement checkt of speler 1 of 2 mag bewegen en als dat zo is verandert hij wie er aan de beurt is
         if (player1.GetComponent<FollowThePath>().waypointIndex > 
             player1StartWaypoint + diceSideThrown)
         {
@@ -51,7 +53,7 @@ public class GameControl : MonoBehaviour {
             player1MoveText.gameObject.SetActive(true);
             player2StartWaypoint = player2.GetComponent<FollowThePath>().waypointIndex - 1;
         }
-
+        //hier checkt hij wie er wint en laat zien wie er wint
         if (player1.GetComponent<FollowThePath>().waypointIndex == 
             player1.GetComponent<FollowThePath>().waypoints.Length)
         {

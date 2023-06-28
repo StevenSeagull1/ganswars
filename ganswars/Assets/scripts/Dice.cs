@@ -3,18 +3,18 @@ using UnityEngine;
 
 public class Dice : MonoBehaviour
 {
-
-    private Sprite[] diceSides;  // Array of dice sides (sprites)
-    private SpriteRenderer rend;  // Reference to the sprite renderer component
-    private int whosTurn = 1;  // Indicates whose turn it is (player 1 or player 2)
-    private bool coroutineAllowed = true;  // Indicates whether the coroutine is allowed to execute
+    // alle variabelen
+    private Sprite[] diceSides;  
+    private SpriteRenderer rend;  
+    private int whosTurn = 1;  
+    private bool coroutineAllowed = true; 
 
     // Start wordt gebruikt voor initialisatie
     private void Start()
     {
         rend = GetComponent<SpriteRenderer>();
-        diceSides = Resources.LoadAll<Sprite>("DiceSides/");  // Laden van alle sprites van de dobbelstenen
-        rend.sprite = diceSides[5];  // Standaard sprite voor de dobbelsteen
+        diceSides = Resources.LoadAll<Sprite>("DiceSides/");  
+        rend.sprite = diceSides[5];  
     }
 
     // Wordt uitgevoerd wanneer er op de dobbelsteen wordt geklikt
